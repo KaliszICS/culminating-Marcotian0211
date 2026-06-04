@@ -10,7 +10,12 @@ String word;
 int number=random.nextInt(128);
 int number1=random.nextInt(128);
 int number2;
-
+int number3=random.nextInt(100);
+int number4=random.nextInt(100);
+int number5=random.nextInt(100);
+int range=0;
+int skip=0;
+int confuse=0;
         System.out.println("Welcome to the Small Card Game");
         System.out.println("The rule of the game:");
         System.out.println("This is a bot vs human game. You and the bot will get a random number.");
@@ -28,8 +33,17 @@ if(word1=="yes"){ System.out.println("your number is "+number);
         System.out.println("Please guess enter a number:");
         number2=scanner.nextInt();
         if(scanner.hasNextInt()&&number2!=number1){
-            System.out.println("You guess wrong")
-          
+            System.out.println("You guess wrong");
+          if(number3<=50){
+            System.out.print("you get range card");
+            counter++;
+          }
+          if(number3<=76){
+           System.out.print("you get skip card");
+          }
+          if(number3<=100){
+            System.out.print("you get confuse card");
+          }
             
         
         }
