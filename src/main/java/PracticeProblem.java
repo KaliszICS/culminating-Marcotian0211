@@ -16,6 +16,7 @@ int number5=random.nextInt(100);
 int range=0;
 int skip=0;
 int confuse=0;
+String word1;
         System.out.println("Welcome to the Small Card Game");
         System.out.println("The rule of the game:");
         System.out.println("This is a bot vs human game. You and the bot will get a random number.");
@@ -36,14 +37,30 @@ if(word1=="yes"){ System.out.println("your number is "+number);
             System.out.println("You guess wrong");
           if(number3<=50){
             System.out.print("you get range card");
-            counter++;
+            range++;
           }
           if(number3<=76){
            System.out.print("you get skip card");
+           skip++;
           }
           if(number3<=100){
             System.out.print("you get confuse card");
+            confuse++;
           }
+          System.out.print("would you want to use the which card?");
+           word1=scanner.nextLine();
+         if(word=="range card"){
+         System.out.println("the range number of the oppensent is:"+number1/2);
+         range--;
+         }
+         if(word=="skip card"&&skip>=2){
+            System.out.println("the bot round was skip.");
+            skip=skip-2;
+           }
+           if(word=="confuse"){
+            System.out.println("the bot get the wrong range of number");
+            confuse--;
+           }
             
         
         }
