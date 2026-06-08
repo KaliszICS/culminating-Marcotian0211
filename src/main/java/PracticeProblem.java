@@ -11,7 +11,7 @@ int number=random.nextInt(128);
 int number1=random.nextInt(128);
 int number2;
 int number3=random.nextInt(100);
-int number4=random.nextInt(100);
+int number4=random.nextInt(100);//bot number
 int number5=random.nextInt(100);
 int range=0;
 int skip=0;
@@ -30,6 +30,7 @@ String word1;
 if (word1=="no"){
 System.out.print("have a good day");
 if(word1=="yes"){ System.out.println("your number is "+number);
+
     do{
         System.out.println("Please guess enter a number:");
         number2=scanner.nextInt();
@@ -65,8 +66,10 @@ if(word1=="yes"){ System.out.println("your number is "+number);
         
         }
     
-        }
+        }while(number2==number4);
+        
     }
+
 }
 
     }
